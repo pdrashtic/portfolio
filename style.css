@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #c5c6c7;
+
+}
+
+.vh100 {
+    height: 100vh;
+}
+
+.color-silver {
+    background-color: #c5c6c7;
+}
+
+.font-silver {
+    color: #c5c6c7;
+}
+
+.h400 {
+    height: 400px;
+}
+
+/* Font-family */
+.libre-baskerville {
+    font-family: "Libre Baskerville", serif;
+    font-size: 55px;
+}
+
+
+li {
+    transition: .2s all linear;
+    border: 1px solid transparent;
+
+}
+
+.bg-nav {
+    background-color: #1f2833;
+}
+
+.font-color {
+    color: #66fcf1;
+}
+
+.bg-color {
+    background-color: #66fcf1;
+}
+
+li:hover {
+    border: 1px solid rgba(0, 0, 0, 0.281);
+    background-color: white;
+}
+
+.text-box {
+    animation: fade-in 2.5s linear;
+
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+.profile-pic-circle {
+    width: 450px;
+    height: 450px;
+    border: 10px solid rgba(255, 255, 255, 0.678);
+    animation: box-come .9s ease;
+    position: relative;
+    background-image: url(https://cdn.dribbble.com/userupload/12530007/file/original-735e8dd80920ec0723d9c6586ca4f4eb.png?resize=752x554&vertical=center);
+    background-size: cover;
+    left: 100px;
+    background-position: center;
+    box-shadow: 0px 0px 10px #66fcf1;
+
+}
+
+@keyframes box-come {
+    0% {
+        left: 500px;
+        opacity: 0%;
+        transform: rotate(20deg);
+    }
+
+    100% {
+        left: 100px;
+        opacity: 100%;
+
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .box-1 {
+        width: 100%;
+        height: 600px;
+
+    }
+
+    .box-2 {
+        display: none;
+
+    }
+
+    .profile-pic-circle {
+        width: 300px;
+        position: relative;
+        height: 300px;
+    }
+}
+
+.icon-box {
+    margin-left: 170px;
+}
+
+.icon-circle {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #0DCAF0;
+    color: #0DCAF0;
+    transition: all .5s ease;
+}
+
+.icon-circle:hover {
+    background-color: #0DCAF0;
+    border-color: white;
+    color: white;
+}
+
+.icon-circle a {
+    font-size: 22px;
+    color: #0DCAF0;
+    text-decoration: none;
+    transition: all .5s ease;
+}
+
+.icon-circle:hover.icon-circle a {
+    color: white;
+}
+
+.img-about {
+    cursor: pointer;
+}
+
+.img-background {
+    border: 20px solid #44817d;
+    background-color: white;
+}
+
+.img-background img {
+    position: relative;
+    top: -50px;
+    border: 10px solid #44817d;
+    left: 150px;
+}
+
+.about-me {
+    transition: .1s linear;
+    animation: fade-in;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
+    cursor: pointer;
+}
+
+.about-me:hover {
+    opacity: 100%;
+}
+
+.button-effect {
+    padding: 10px;
+    height: 30px;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    margin-bottom: 10px;
+    border: 1px solid #66fcf1;
+    transition: .5s ease;
+}
+
+.button-effect:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px white;
+}
+
+.button-effect:hover.button-effect::after {
+    left: 0%;
+}
+
+.button-effect:hover.button-effect::before {
+    right: 50%;
+}
+
+.button-effect::after {
+    content: "Read More..";
+    font-weight: 500;
+    width: 100%;
+    transition: .4s ease;
+    height: 100%;
+    position: absolute;
+    left: 100%;
+    background-color: #0DCAF0;
+}
+
+.button-effect::before {
+    content: "";
+    width: 100%;
+    transition: .4s ease;
+    height: 100%;
+    position: absolute;
+    right: 100%;
+    background-color: #0DCAF0;
+}
+.right-part{
+    position: relative;
+    animation: right-slider;
+    animation-timeline: view();
+    animation-range: entry 2% cover 30%;
+}
+.left-part{
+    position: relative;
+    animation: left-slider;
+    animation-timeline: view();
+    animation-range: entry 2% cover 30%;
+}
+.img-project {
+    box-shadow: 0 0 10px white;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4%;
+    animation: left-slider;
+    animation-timeline: view();
+    animation-range: entry 2% cover 30%;
+    top: 0;
+    padding: 0;
+    background-image: url(Screenshot\ 2024-03-11\ 025907.png);
+    aspect-ratio: 3/2;
+    background-size: cover;
+    background-position: center;
+    transition: .6s ease;
+}
+
+.img-project:hover {
+    border: 1px solid black;
+}
+
+.img-project:hover .containt-container {
+    bottom: -50%;
+}
+
+.containt-container {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.541);
+    font-weight: 800;
+    height: 100%;
+    padding-top: 20px;
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+    transition: .4s ease;
+    position: absolute;
+    bottom: -100%;
+}
+
+.containt-container p {
+    font-size: 12px
+}
+
+.containt-container h2 {
+    font-size: 52px;
+}
+
+@keyframes left-slider {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: 0%;
+    }
+
+}
+
+@keyframes right-slider {
+    0% {
+        right: 100%;
+    }
+
+    100% {
+        right: 0%;
+    }
+
+}
